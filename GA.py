@@ -60,7 +60,7 @@ class GeneticAlgorithm:
     #-------------遗传函数开始执行---------------------
     def run(self):
 
-        print "开始迭代"
+        print("开始迭代")
 
         #路线数组
         lines = [[0 for i in range(self.mans)] for i in range(self.rows)]
@@ -237,19 +237,19 @@ class GeneticAlgorithm:
                 m = fit[i]
                 ml = i
 
-        print "迭代完成"
+        print("迭代完成")
         #输出结果:
         self.calFitness(lines[ml], True)
 
-        print "最优权值为: %f" %(m)
-        print "最优结果为:"
+        print("最优权值为: %f" %(m))
+        print("最优结果为:")
 
         for i in range(self.mans):
-            print "%d," %(lines[ml][i]),
+            print("%d," %(lines[ml][i]))
 
-        print "    "
-        print "    "
-        print "    "
+        print("    ")
+        print("    ")
+        print("    ")
 
 
     #-----------------遗传函数执行完成--------------------
@@ -304,7 +304,7 @@ class GeneticAlgorithm:
         totalDis += carDis + self.d[fore][0]
 
         if isShow:
-            print "总行驶里程为: %.1fkm" %(totalDis)
+            print("总行驶里程为: %.1fkm" %(totalDis))
         else:
             # print "中间过程尝试规划的总行驶里程为: %.1fkm" %(totalDis)
             pass
@@ -383,5 +383,5 @@ class GeneticAlgorithm:
 ga = GeneticAlgorithm(rows=20, times=25, mans=8, cars=2, tons=8, distance=50, PW=100)
 
 for i in range(20):
-    print "第 %d 次：" %(i + 1)
+    print("第 %d 次：" %(i + 1))
     ga.run()
